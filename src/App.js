@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
 
+import './App.css';
+import ExpenseItem from './Components/ExpenseItem';
+import Expenses from './Components/Expenses';
 function App() {
+  const name = 'kshitij';
+  const expenses = [{
+    id: '321e',
+    name: 'Car Insurance',
+    amount: 94.12,
+    date: new Date(2022, 7, 8)
+  },
+  {
+    id: '421e',
+    name: 'Laundary',
+    amount: 14.12,
+    date: new Date(2022, 7, 26)
+  },
+  {
+    id: '321e',
+    name: 'Car repairs',
+    amount: 694.12,
+    date: new Date(2022, 2, 21)
+  },]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Lets get started with this udemy course once again {name}</h1>
+      <h2>{name}</h2>
+      <Expenses items={expenses} />
     </div>
   );
 }
